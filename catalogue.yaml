@@ -5,7 +5,7 @@
   tasks:
     - name: setup NPM source
       ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
-      
+
     - name: Install NodeJS
       ansible.builtin.yum:
         name: nodejs
@@ -32,13 +32,13 @@
     - when: directory.stat.exits == False 
       name: create /app directory 
       ansible.builtin.file:
-      path: unzip /tmp/catalogue.zip
+      path: /app
       state: directory
 
     - name: download catalogue artifact
-       ansible.builtin.get_url:
-       url: https://roboshop-builds.s3.amazonaws.com/catalogue.zip
-       dest: /tmp
+      ansible.builtin.get_url:
+        url: https://roboshop-builds.s3.amazonaws.com/catalogue.zip
+        dest: /tmp
 
     - name : extract catalogue artifact
       ansible.builtin.unarchive:
