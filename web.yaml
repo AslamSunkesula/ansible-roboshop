@@ -1,0 +1,17 @@
+- name: install web component
+  hosts: web
+  become: yes
+  tasks:
+  - name : install nginx
+    ansible.builtin.yum:
+      name: nginx
+      state: installed
+  - name: Start & Enable Nginx service
+    ansible.builtin.service:
+    name: nginx
+    state: started
+    nabled: yes
+  - name: remove html directory
+    
+ 
+
