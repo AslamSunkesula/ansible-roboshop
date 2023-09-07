@@ -24,3 +24,9 @@ mysql.aslamroboshop.online
 
 [shipping]
 shipping.aslamroboshop.online
+
+[rabbitmq]
+rabbitmq.aslamroboshop.online
+
+[payment]
+payment.aslamroboshop.online
