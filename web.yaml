@@ -6,7 +6,7 @@
     ansible.builtin.yum:
       name: nginx
       state: installed
-  - name: Start & Enable Nginx service
+  - name: start and enable nginx
     ansible.builtin.service:
       name: nginx
       state: started
@@ -19,8 +19,8 @@
     ansible.builtin.file:
       path: /usr/share/nginx/html
       state: directory
-
-  - name: Download the frontend content
+  
+  - name: download web artifact
     ansible.builtin.get_url:
       url: https://roboshop-builds.s3.amazonaws.com/web.zip
       dest: /tmp
@@ -30,12 +30,13 @@
       src: /tmp/web.zip
       dest: /usr/share/nginx/html
       remote_src: yes
+
   - name: copy roboshop.conf
     ansible.builtin.copy:
       src: roboshop.conf
       dest: /etc/nginx/default.d/roboshop.conf
-  - name: estart nginx
+    
+  - name: restart nginx
     ansible.builtin.service:
       name: nginx
       state: restarted
-
