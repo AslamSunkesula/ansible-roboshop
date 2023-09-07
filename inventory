@@ -1,8 +1,13 @@
 [mongodb]
-mongodb.aslamroboshop.online
+mongod.aslamroboshop.online
+
+
+
 
 [catalogue]
 catalogue.aslamroboshop.online
+
+
 
 [web]
 web.aslamroboshop.online
