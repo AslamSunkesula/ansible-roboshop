@@ -28,7 +28,7 @@
   - name: extract catalogue artifact
     ansible.builtin.unarchive:
       src: unzip /tmp/web.zip
-      dest: cd /usr/share/nginx/html
+      dest: /usr/share/nginx/html
       remote_src: yes
   - name: copy roboshop.conf
     ansible.builtin.copy:
