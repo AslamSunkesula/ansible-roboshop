@@ -19,7 +19,7 @@
     ansible.builtin.file:
       path: /usr/share/nginx/html
       state: directory
-  
+
   - name: download web artifact
     ansible.builtin.get_url:
       url: https://roboshop-builds.s3.amazonaws.com/web.zip
@@ -35,8 +35,7 @@
     ansible.builtin.copy:
       src: roboshop.conf
       dest: /etc/nginx/default.d/roboshop.conf
-      remote_src: yes
-    
+
   - name: restart nginx
     ansible.builtin.service:
       name: nginx
