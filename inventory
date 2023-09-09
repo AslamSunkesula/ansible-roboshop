@@ -1,13 +1,11 @@
 [mongodb]
-mongod.aslamroboshop.online
+mongodb.aslamroboshop.online
 
 [catalogue]
 catalogue.aslamroboshop.online
 
-
 [web]
 web.aslamroboshop.online
-
 
 [redis]
 redis.aslamroboshop.online
@@ -24,6 +22,7 @@ mysql.aslamroboshop.online
 
 [shipping]
 shipping.aslamroboshop.online
+
 
 [rabbitmq]
 rabbitmq.aslamroboshop.online
