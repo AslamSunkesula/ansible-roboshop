@@ -29,7 +29,7 @@ for i in $@
      aws route53 change-resource-record-sets --hosted-zone-id Z035342425855QKP40L24 --change-batch '
     {
             "Changes": [{
-            "Action": "CREATE",
+            "Action": "UPSERT",
                         "ResourceRecordSet": {
                             "Name": "'$i.$DOMAIN_NAME'",
                             "Type": "A",
