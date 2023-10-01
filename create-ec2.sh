@@ -12,7 +12,7 @@ for i in $@
 
     if [[ $i == "mongodb" || $i == "mysql" ]]; then
 
-        INSTANCE_TYPE="t2.medium"
+        INSTANCE_TYPE="t2.micro"
     else
 
         INSTANCE_TYPE="t2.micro"
@@ -32,7 +32,7 @@ for i in $@
                         "ResourceRecordSet": {
                             "Name": "'$i.$DOMAIN_NAME'",
                             "Type": "A",
-                            "TTL": 300,
+                            "TTL": 1,
                             "ResourceRecords": [{ "Value": "'$IP_ADDRESS'"}]
                         }}]
     }
