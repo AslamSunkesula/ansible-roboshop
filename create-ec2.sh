@@ -4,7 +4,7 @@ NAMES=$@
 
 INSTANCE_TYPE=" "
 IMAGE_ID=ami-03265a0778a880afb
-SECURITY_GROUP_ID=sg-0c1c6845264d0303b
+SECURITY_GROUP_ID=sg-003d693980a3ff9f2
 DOMAIN_NAME=aslamroboshop.online
 
 for i in $@
@@ -12,8 +12,7 @@ for i in $@
 
     if [[ $i == "mongodb" || $i == "mysql" ]]; then
 
-        INSTANCE_TYPE="t3.medium"
-
+        INSTANCE_TYPE="t2.medium"
     else
 
         INSTANCE_TYPE="t2.micro"
